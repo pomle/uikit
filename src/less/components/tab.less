@@ -74,13 +74,14 @@
  * 2. Style
  */
 
-.uk-tab > * > a {
+.uk-tab > * > a,
+.uk-tab > * > button {
     /* 1 */
-    display: block;
     text-align: center;
     /* 2 */
     padding: @tab-item-padding-vertical @tab-item-padding-horizontal;
     color: @tab-item-color;
+    outline: none;
     .hook-tab-item;
 }
 
@@ -93,13 +94,15 @@
 }
 
 /* Active */
-.uk-tab > .uk-active > a {
+.uk-tab > .uk-active > a,
+.uk-tab > .uk-active > button {
     color: @tab-item-active-color;
     .hook-tab-item-active;
 }
 
 /* Disabled */
-.uk-tab > .uk-disabled > a {
+.uk-tab > .uk-disabled > a,
+.uk-tab > .uk-disabled > button {
     color: @tab-item-disabled-color;
     .hook-tab-item-disabled;
 }
@@ -116,7 +119,8 @@
     .hook-tab-bottom;
 }
 
-.uk-tab-bottom > * > a {
+.uk-tab-bottom > * > a,
+.uk-tab-bottom > * > button {
     .hook-tab-bottom-item;
 }
 
@@ -144,12 +148,14 @@
     .hook-tab-right;
 }
 
-.uk-tab-left > * > a {
+.uk-tab-left > * > a,
+.uk-tab-left > * > button {
     text-align: left;
     .hook-tab-left-item;
 }
 
-.uk-tab-right > * > a {
+.uk-tab-right > * > a,
+.uk-tab-right > * > button {
     text-align: left;
     .hook-tab-right-item;
 }
@@ -188,23 +194,28 @@
         .hook-inverse-tab;
     }
 
-    .uk-tab > * > a {
+    .uk-tab > * > a,
+    .uk-tab > * > button {
         color: @inverse-tab-item-color;
         .hook-inverse-tab-item;
     }
 
     .uk-tab > * > a:hover,
-    .uk-tab > * > a:focus{
+    .uk-tab > * > a:focus,
+    .uk-tab > * > button:hover,
+    .uk-tab > * > button:focus {
         color: @inverse-tab-item-hover-color;
         .hook-inverse-tab-item-hover;
     }
 
-    .uk-tab > .uk-active > a {
+    .uk-tab > .uk-active > a,
+    .uk-tab > .uk-active > button {
         color: @inverse-tab-item-active-color;
         .hook-inverse-tab-item-active;
     }
 
-    .uk-tab > .uk-disabled > a {
+    .uk-tab > .uk-disabled > a,
+    .uk-tab > .uk-disabled > button {
         color: @inverse-tab-item-disabled-color;
         .hook-inverse-tab-item-disabled;
     }
